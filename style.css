@@ -1,0 +1,539 @@
+/* ====================================================================================================================
+  ================================  IMPORTED FONTS FROM GOOGLE FONTS  ==============================================================
+  ==================================================================================================================== */
+  @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ====================================================================================================================
+================================  INITIAL SETTING FOR THE CSS BOX MODEL ||| STRIPPING ALL INITIAL DEFAULT BROWSER STYLES  ==============================================================
+==================================================================================================================== */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: black;
+    position: sticky;
+    top: 0px;
+    align-items: center;
+    z-index: 10000;
+}
+
+nav a{
+	list-style: none;
+	text-decoration: none;
+    color: white;
+    align-items: center;
+}
+
+nav .logo a{
+    display: flex;
+    align-items: center;
+	font-size: 25px;
+}
+
+nav .logo a img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    align-items: center;
+}
+
+nav .logo a span{
+    color: red;
+    font-family: Clicker Script;
+}
+
+nav menu{
+    padding-right: 50px;
+}
+
+nav menu ul{
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+}
+
+nav menu ul a{
+    transition: all 0.3s ease-in-out;
+}
+
+nav menu ul a:hover{
+    color: red;
+}
+
+.active{
+    color: red;
+}
+
+/* ====================================================================================================================
+  ================================   GO TO TOP BUTTON   ==============================================================
+  ==================================================================================================================== */
+/*styling for GO TO TOP button goes here*/
+.to-top{
+    background: black;
+    position: fixed;
+    text-decoration: none;
+    bottom: -32px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+    transition-delay: 0.3s;
+    box-shadow: 0 0 0px red;
+    animation: glow 1.3s linear infinite;/*TO ADD ANIMATION OF GLOWING EFFECT*/
+    animation-delay: 0.5s;
+}
+
+@keyframes glow {/*KEY FRAMES USED TO ADD TIMING OF GLOW AT DIFFERENT INTERVALS*/
+    0%{
+        transition-delay: 0.3s;
+        box-shadow: 0 0 0px red;
+    }
+    60%{
+        transition-delay: 0.3s;
+        box-shadow: 0 0 0px red,
+                    0 0 20px red,
+                    0 0 40px red;
+    }
+    100%{
+        transition-delay: 0.3s;
+        box-shadow: 0 0 0px red,
+                    0 0 20px red,
+                    0 0 40px red,
+                    0 0 80px red,
+                    0 0 160px red;
+    }
+}
+
+.to-top i{
+    color: white;
+}
+
+.to-top-active{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+    z-index: 2000;
+}
+
+.services{
+    background-color: rgb(221, 215, 215);
+    padding: 20px 50px;
+}
+
+.about,
+.contact{
+    padding: 20px 50px;
+}
+
+.index{
+    background-color: rgb(221, 215, 215);
+}
+
+.index .slider img{
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.index .text{
+    padding: 20px 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.index .text .article{
+    width: 70%;
+    background-color: aqua;
+}
+
+.index .text .advert{
+    width: 30%;
+    background-color: blueviolet;
+}
+
+.section-title{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    padding: 10px;
+}
+
+.section-title h3{
+    background-color: gray;
+    width: fit-content;
+    padding: 5px 25px;
+    border-radius: 80px;
+    box-shadow: inset 0 0 5px black;
+}
+
+.section-content .row-one{
+    padding-top:70px;
+    padding-bottom:70px;
+    display: flex;
+}
+
+.section-content .row-one .pic{
+    position: relative;
+    width: 450px;
+    height: 450px;
+}
+
+.section-content .row-one .pic .pic-img{
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 60px;
+    object-fit: cover;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    object-fit: cover;
+}
+
+.section-content .row-one .pic .pic-img:hover{
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.section-content .row-one .pic .row{
+    background-color: red;
+    width: 300px;
+    height: 390px;
+    border-radius: 10px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.section-content .row-one .text{
+    padding-top: 70px;
+    width: 600px;
+}
+
+.section-content .row-one .text .header-txt{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.section-content .row-one .text p{
+    font-size: 16px;
+}
+
+.section-content .row-one .text p:nth-child(2){
+    padding-bottom: 10px;
+}
+
+.section-content .row-one .text p:nth-child(3){
+    padding-bottom: 20px;
+}
+
+.section-content .row-one .text .box{
+    display: flex;
+    gap: 10px;
+}
+
+.section-content .row-one .text .box .card{
+    background-color: rgb(192, 182, 182);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.section-content .row-one .text .box .card:hover{
+    box-shadow: inset 0 0 5px black;
+    background-color: rgb(109, 106, 106);
+}
+
+.section-content .row-one .text .box .card .card-title{
+    font-size: 25px;
+}
+
+.box1{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:400px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.box2{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:400px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.card2{
+	display:inline-block;
+	height:365px;
+	width:335px;
+	padding:20px 35px;
+	background: linear-gradient(to top,rgba(0, 0, 0, 0.1)90%,rgba(0, 0, 0, 0.1)90%);
+	border-radius:20px;
+	margin:15px;
+	position:relative;
+	overflow:hidden;
+	text-align:center;
+	transition: 0.5 ease;
+	box-shadow: 0 0 17px 5px grey;
+}
+
+.card2:hover{
+	background: lightgrey;
+	transform: scale(1.05);
+}
+
+.card2 h5{
+	color:black;
+	font-size:23px;
+	margin-top: 55px;
+}
+
+.pra p{
+color:black;
+font-size:16px;
+line-height:27px;
+margin-top: 5px;
+}
+
+.redtxt{
+    color: red;
+}
+
+
+/*========================form=======================*/
+form{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gform{
+    width: 500px;
+	padding: 50px 0px;
+	background-image: url('images/1.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+    border-radius: 10px;
+}
+
+.ROW5{
+	text-align: center;
+}
+
+.ROW5 .CONTACT_TITLE{
+	font-weight: bold;
+	font-size: 25px;
+	padding-bottom: 10px;
+}
+
+.ROW5 .CONTACT_SUB_TITLE{
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+.ROW6 .CONTACT_FORM .ROW1,
+.ROW6 .CONTACT_FORM .ROW2,
+.ROW6 .CONTACT_FORM .ROW3,
+.ROW6 .CONTACT_FORM .ROW4{
+	display: flex;
+	justify-content: center;
+}
+
+.CONTACT_FORM .ROW1{
+	display: flex;
+	gap: 10px;
+}
+
+.CONTACT_FORM .ROW1 .FORM_ITEM{
+	display: flex;
+	justify-content: center;
+	width: 50%;
+	margin-bottom: 10px;
+}
+
+.CONTACT_FORM .ROW1 .FORM_ITEM .FORM_GROUP .FORM_CONTROL{
+	padding: 5px 20px;
+	height: 40px;
+	border-radius: 80px;
+	outline: none;
+}
+
+.CONTACT_FORM .ROW2 .FORM_ITEM{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+.CONTACT_FORM .ROW2 .FORM_ITEM .FORM_GROUP .FORM_CONTROL{
+	padding: 5px 20px;
+	height: 40px;
+	width: 465px;
+	border-radius: 80px;
+	outline: none;
+}
+
+.CONTACT_FORM .ROW3 .FORM_ITEM{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+.CONTACT_FORM .ROW3 .FORM_ITEM .FORM_GROUP .FORM_CONTROL_MESSAGE{
+	padding: 20px;
+	height: 100px;
+    width: 465px;
+	border-radius: 20px;
+	outline: none;
+	resize: none;
+}
+
+/* ====================================================================================================================
+  ================================  BUTTON STYLING ||| REUSABLE CODE FOR ALL THE PAGES  ==============================================================
+  ==================================================================================================================== */
+  .btn{
+    position: relative;
+    display: inline-block;
+    border-radius: 80px;
+    padding: 15px 30px;
+    width: fit-content;
+    border: 2px solid red;
+    letter-spacing: 2px;
+    transition: 0.2s;
+    transition-delay: 0s;
+}
+
+.btn span{
+    position: relative;
+    z-index: 100;/*MAKES THE TEXT POP OUT INFRONT OF OTHER ELEMENTS*/
+}
+
+.btn span a{
+    color: black;
+    text-decoration: none;
+}
+
+.hide{
+    display: none;
+}
+
+.btn:hover span,
+.btn:hover span a{
+    transition-delay: 0.3s;
+    color: white;
+}
+
+.btn::before{/*FOR THE MIDDLE LINE ON THE LEFT IN THE BUTTON*/
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    border-radius: 80px;
+    background: red;
+    box-shadow: 5px -8px 0 red,/*FOR THE TOP LINE ON THE LEFT IN THE BUTTON*/
+                5px 8px 0 red;/*FOR THE BOTTOM LINE ON THE LEFT IN THE BUTTON*/
+    transition: width 0.1s, left 0.1s, height 0.1s, box-shadow 0.1s;
+    transition-delay: 0.3s, 0.1s, 0s, 0s;
+}
+
+.btn:hover::before{/*HOVER EFFECT FOR THE LINES AND FILL OF THE BUTTON ON THE LEFT SIDE*/
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0 red,/*TOP LINE*/
+                5px 0 0 red;/*BOTTOM LINE*/
+    transition-delay: 0s, 0.1s, 0.3s, 0.3s;
+}
+
+.btn::after{/*FOR THE MIDDLE LINE ON THE LEFT IN THE BUTTON*/
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    border-radius: 80px;
+    background: red;
+    box-shadow: -5px -8px 0 red,/*FOR THE TOP LINE ON THE RIGHT IN THE BUTTON*/
+                -5px 8px 0 red;/*FOR THE BOTTOM LINE ON THE RIGHT IN THE BUTTON*/
+    transition: width 0.1s, left 0.1s, height 0.1s, box-shadow 0.1s;
+    transition-delay: 0.3s, 0.1s, 0s, 0s;
+}
+
+.btn:hover::after{/*HOVER EFFECT FOR THE LINES AND FILL OF THE BUTTON ON THE RIGHT SIDE*/
+    width: 60%;
+    height: 100%;
+    right: -2px;
+    box-shadow: -5px 0 0 red,/*TOP LINE*/
+                -5px 0 0 red;/*BOTTOM LINE*/
+    transition-delay: 0s, 0.1s, 0.3s, 0.3s;
+}
+
+
+/*========================map=======================*/
+.map{
+    height: 365px;
+	width: 500px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.map iframe{
+	width: 100%;
+	height: 100%;
+}
+
+footer p{
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+    background-color: black;
+    color: white;
+    position: sticky;
+    bottom: 0px;
+    font-size: 14px;
+}
+
+footer .ARTKINS{
+    color: white;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+footer .ARTKINS:hover{
+    color: red;
+    text-decoration: underline;
+}
