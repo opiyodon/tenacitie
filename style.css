@@ -148,26 +148,185 @@ nav menu ul a:hover{
     background-color: rgb(221, 215, 215);
 }
 
-.index .slider img{
+.index .banner{
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+.index .banner img{
     height: 70vh;
     width: 100%;
     object-fit: cover;
+    position: absolute;
+    backface-visibility: hidden;
+    opacity: 0;
+    transform: scale(1.4) rotate(5deg);
+    animation: animate 20s infinite;
+}
+
+.index .banner img:nth-child(8){
+    animation-delay: 0s;
+}
+
+.index .banner img:nth-child(7){
+    animation-delay: 6s;
+}
+
+.index .banner img:nth-child(6){
+    animation-delay: 12s;
+}
+
+.index .banner img:nth-child(5){
+    animation-delay: 18s;
+}
+
+.index .banner img:nth-child(4){
+    animation-delay: 24s;
+}
+
+.index .banner img:nth-child(3){
+    animation-delay: 30s;
+}
+
+.index .banner img:nth-child(2){
+    animation-delay: 36s;
+}
+
+.index .banner img:nth-child(1){
+    animation-delay: 42s;
+}
+
+/* ====================================================================================================================
+================================  KENBURN EFFECT ||| AUTOMATIC SLIDE SHOW  ==============================================================
+==================================================================================================================== */
+@keyframes animate{
+    25%{
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+    50%{
+        opacity: 0;
+    }
 }
 
 .index .text{
-    padding: 20px 50px;
     display: flex;
-    gap: 20px;
 }
 
 .index .text .article{
     width: 70%;
-    background-color: aqua;
+    border-right: 1px solid black;
+    padding: 10px 20px;
+    padding-right: 30px;
+}
+
+.index .text .article .row-two{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.index .text .article .row-two .cardz2{
+    width: 400px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.index .text .article .row-two .cardz2 .row{
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.index .text .article .row-two .cardz2 .row .cardz2-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.index .text .article .row-two .cardz2 .image1{
+    height: 100%;
+}
+
+.index .text .article .row-two .cardz2 .cardz2-text{
+    background-color: rgb(221, 215, 215);
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.index .text .article .row-two .cardz2 .floating{
+    position: absolute;
+    border-radius: 10px;
+    transform: translateX(5%);
+    width: 90%;
+}
+
+.index .text .article .row-two .cardz2 .cardz2-text .title h5{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.index .text .article .row-two .cardz2 .cardz2-text p{
+    color: var(--light_txt1);
+    font-size: 16px;
 }
 
 .index .text .advert{
     width: 30%;
-    background-color: blueviolet;
+    padding: 10px 20px;
+}
+
+.index .text .advert .ROW{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.index .text .advert .ROW .cardz{
+    background-color: rgb(214, 168, 168);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+}
+
+.index .text .advert .ROW .cardz .details{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-right: 1px solid black;
+    padding-right: 10px;
+}
+
+.index .text .advert .ROW .cardz .details img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.index .text .advert .ROW .cardz .details p{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.index .text .advert .ROW .cardz .detail-txt{
+    padding-left: 13px;
 }
 
 .section-title{
